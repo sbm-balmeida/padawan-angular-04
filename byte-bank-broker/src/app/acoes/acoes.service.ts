@@ -18,7 +18,8 @@ export class AcoesService {
     .pipe(
       tap((valor) => console.log(valor)),
       pluck('payload'),
-      map((acoes) => acoes.sort((acaoA, acaoB) => this.ordenaPorCodigo(acaoA, acaoB))));
+      map((acoes) => acoes.sort((acaoA, acaoB) => this.ordenaPorCodigo(acaoA, acaoB)))
+    );
   }
 
   private ordenaPorCodigo(acaoA: Acao, acaoB: Acao) {
